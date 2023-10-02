@@ -32,6 +32,7 @@ jobs:
       run: git clone https://github.com/SahilGourOfficialGit/test
     - name: Download Python Modules
       run: pip install tensorflow transformers requests
+    - name: Install PyTorch
       run: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
     - name: download datasets
       run: cd test && python3 download.py
