@@ -30,6 +30,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Clone Repository
       run: git clone https://github.com/SahilGourOfficialGit/test
+    - name: Download Python Modules
+      run: pip install tensorflow transformers requests
     - name: download datasets
       run: cd test && python3 download.py
     - name: Build 
