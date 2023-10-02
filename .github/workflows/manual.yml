@@ -12,7 +12,7 @@ on:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Building Python Codes'
         # Default value if no value is explicitly provided
-        default: 'World'
+        default: 'Chatbot'
         # Input has to be provided for the workflow to run
         required: true
         # The data type of the input
@@ -28,7 +28,9 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
+    - name: Clone Repository
+      run: git clone https://github.com/SahilGourOfficialGit
     - name: download datasets
-      run: python3 download.py
+      run: cd SahilGourOfficialGit && python3 download.py
     - name: Build 
       run: python3 build.py
