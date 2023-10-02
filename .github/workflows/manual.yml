@@ -29,8 +29,8 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Clone Repository
-      run: git clone https://github.com/SahilGourOfficialGit
+      run: git clone https://github.com/SahilGourOfficialGit/test
     - name: download datasets
-      run: cd SahilGourOfficialGit && python3 download.py
+      run: cd test && python3 download.py
     - name: Build 
       run: python3 build.py
